@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            height: 75px;
+        }
+        .botao-header{
+            background-color: transparent; /* Deixa o fundo transparente */
+            border: 2px solid transparent;
+            color: #008bb4;
+            font-family: "Poppins", serif;
+            font-weight: 600;
+            font-style: normal;
+            
+        }
+
+        button, input {
+            margin-left: 20px;
+            
+            
+        }
+        .foto-perfil{
+
+            background-size: contain; /* Ajusta o tamanho da imagem */
+            background-repeat: no-repeat; /* Impede a repetição da imagem */
+            height: 50px; /* Defina uma altura para o logo */
+            width: 100px; /* Defina uma largura para o logo */
+        }
+        .input-pesquisar{
+            width: 140px;
+            height: 30px;
+            border-radius: 30px;
+            border: 2px solid #008bb4;
+            color: #008bb4;
+            background-color: white;
+            padding-left: 10px;
+            margin-right: 10px;
+        }
+        .ajeitar{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            margin-right: 6px;
+        }
+
+        .header-botao{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            margin-left: 6px;
+        }
+        
+        .burger {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        background: transparent;
+        cursor: pointer;
+        display: block;
+        }
+
+        .burger input {
+        display: none;
+        }
+
+        .burger span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: #008bb4;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+        }
+
+        .burger span:nth-of-type(1) {
+        top: 0px;
+        transform-origin: left center;
+        }
+
+        .burger span:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: left center;
+        }
+
+        .burger span:nth-of-type(3) {
+        top: 100%;
+        transform-origin: left center;
+        transform: translateY(-100%);
+        }
+
+        .burger input:checked ~ span:nth-of-type(1) {
+        transform: rotate(45deg);
+        top: 0px;
+        left: 5px;
+        }
+
+        .burger input:checked ~ span:nth-of-type(2) {
+        width: 0%;
+        opacity: 0;
+        }
+
+        .burger input:checked ~ span:nth-of-type(3) {
+        transform: rotate(-45deg);
+        top: 28px;
+        left: 5px;
+        }
+        .imagem-logo{
+            margin-left: 10px;
+        }
+        .link-logo{
+            background-color: white ;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="header-botao">
+            <label class="burger" for="burger">
+                <input type="checkbox" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <a href="" class="link-logo"><img class="imagem-logo" width="100px" height="40.34px" src="static/images/logo-saude-em-acao.png" alt="imagem da logo do site escrito 'Saude em Ação'"></a>
+        </div>  
+        <div class="ajeitar">
+            <input placeholder="Pesquisar" type="text" name="pesquisar" id="" class="input-pesquisar">
+            <img width="40px" height="40px" src="static/images/foto-perfil-joao.png" alt="">
+        </div>
+    </header>
+</body>
+</html>
