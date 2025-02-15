@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 75px;
+    padding: 0 20px;
+}
+
+.botao-header {
+    background: transparent;
+    border: none;
+    color: #008bb4;
+    font-weight: 600;
+}
+
+button, input {
+    margin-left: 20px;
+}
+
+.input-pesquisar {
+    width: 140px;
+    height: 30px;
+    border-radius: 30px;
+    border: 2px solid #008bb4;
+    color: #008bb4;
+    background: white url('https://cdn-icons-png.flaticon.com/512/149/149852.png') no-repeat right 10px center;
+    background-size: 16px;
+    padding-left: 10px;
+}
+
+.ajeitar,
+.header-botao {
+    display: flex;
+    align-items: center;
+}
+
+.burger {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+}
+.burger input {
+    display: none;
+}
+.burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #008bb4;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transition: .25s ease-in-out;
+}
+.burger span:nth-of-type(1) { top: 0px; transform-origin: left center; }
+.burger span:nth-of-type(2) { top: 50%; transform: translateY(-50%); transform-origin: left center; }
+.burger span:nth-of-type(3) { top: 100%; transform-origin: left center; transform: translateY(-100%); }
+
+.burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg) translate(5px, -5px);
+    width: 100%;
+}
+.burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+.burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg) translate(5px, 5px);
+    width: 100%;
+}
+
+.menu {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 200px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    padding: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #008bb4;
+    cursor: pointer;
+}
+
+.menu ul li:hover {
+    background: #f0f0f0;
+}
+
+.menu.show {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    padding-left: 15px;
+}
+
+.submenu li {
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.submenu li:hover {
+    background: #e0f7fa;
+}
+
+a {
+    text-decoration: none;
+    color: #008bb4;
+    font-weight: 600;
+}
+
+a:visited {
+    color: #008bb4;
+}
+
+a:hover {
+    background: #e0f7fa;
+}
+
+.submenu a {
+    font-size: 14px;
+}

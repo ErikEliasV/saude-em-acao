@@ -45,6 +45,7 @@ h3{
     flex-direction: row;
     justify-content: space-between;
     gap: 20px;
+    padding-top: 30px;
 }
 button{
     width: 280px;
