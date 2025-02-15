@@ -13,7 +13,7 @@
         <h1>Faça seu Cadastro</h1>
         <hr class="ajeitar-registro">
         <div class="group">
-            <input required="" id="cpf" type="text" class="input" maxlength="14" oninput="formatCPF(this)" >
+            <input required="" id="cpf" type="tel" class="input" maxlength="14" oninput="formatCPF(this)" onchange="formatCPF(this)" >
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>CPF</label>
@@ -39,6 +39,6 @@
         <div class="botao-cadastra"><button>Cadastrar</button></div>
 
     </div>
-<link href="../static/js/scripts/cpf.js">
+<script src="../static/js/scripts/cpf.js"></script>
 </body>
 </html>
