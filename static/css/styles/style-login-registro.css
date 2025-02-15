@@ -56,7 +56,6 @@ button{
     font-size: 16px;
     padding-top: 12px;
     padding-bottom: 12px;
-    margin-bottom: 30px;
 }
 button:active{
     background-color: white;
@@ -70,6 +69,12 @@ button:active{
     flex-direction: row;
     justify-content: space-between;
     gap: 140px;
+}
+.botao-cadastra{
+    padding-top: 30px;
+}
+.botao-voltar{
+    padding-top: 15px;
 }
 .group {
 position: relative;
@@ -141,9 +146,6 @@ width: 50%;
 
 .highlight {
 display: none;
-}
-.botao-cadastra{
-    padding-top: 30px;
 }
 .input:focus ~ .highlight {
 animation: inputHighlighter 0.3s ease;
