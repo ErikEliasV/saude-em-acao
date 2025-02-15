@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles/style-login-registro.css">
+</head>
+<body>
+    <div class="tela">
+        <img src="../static/images/logo-saude-em-acao-semtitulo.png" alt="" width="90" height="87,84">
+        <h1>Faça seu Cadastro</h1>
+        <hr class="ajeitar-registro">
+        <div class="group">
+            <input required="" id="cpf" type="text" class="input" maxlength="14" oninput="formatCPF(this)" >
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>CPF</label>
+          </div>
+          <div class="group">
+            <input required="" type="email" class="input" >
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Email</label>
+          </div>
+          <div class="group">
+            <input required="" type="password" class="input" >
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Senha</label>
+          </div>
+          <div class="group">
+            <input required="" type="password" class="input" >
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Repita a senha</label>
+          </div>
+        <div class="botao-cadastra"><button>Cadastrar</button></div>
+
+    </div>
+<link href="../static/js/scripts/cpf.js">
+</body>
+</html>
