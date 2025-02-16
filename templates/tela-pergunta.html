@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        html, body {
+            overflow: hidden;
+            height: 100%;
+            touch-action: none;
+        }
+        h1{
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        h3{
+            color: #008bb4;
+            font-weight: 100;
+        }
+        .topo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #008bb4;
+            height: 35px;
+            width: 100%;
+        }
+        .tela{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2); /* Aumenta um pouco o tamanho do checkbox */
+        }
+
+        label {
+            display: inline-block; /* Deixa os checkboxes e labels lado a lado */
+            font-size: 16px;
+            margin-bottom: 10px;
+            margin-right: 20px;
+        } 
+
+        .group {
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .input {
+            font-size: 16px;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            width: 200px;
+            border: none;
+            border-bottom: 1px solid #515151;
+            background: transparent;
+        }
+
+        .input:focus {
+            outline: none;
+        }
+
+        label {
+            color: #999;
+            font-size: 18px;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            left: 5px;
+            top: 10px;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+        }
+
+        .input:focus ~ label, .input:valid ~ label {
+            top: -20px;
+            font-size: 14px;
+            color: #008bb4;
+        }
+
+        .bar {
+            position: relative;
+            display: block;
+            width: 200px;
+        }
+
+        .bar:before, .bar:after {
+            content: '';
+            height: 2px;
+            width: 0;
+            bottom: 1px;
+            position: absolute;
+            background: #008bb4;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+        }
+
+        .bar:before {
+            left: 50%;
+        }
+
+        .bar:after {
+            right: 50%;
+        }
+
+        .input:focus ~ .bar:before, .input:focus ~ .bar:after {
+            width: 50%;
+        }
+
+        .highlight {
+            position: absolute;
+            height: 60%;
+            width: 100px;
+            top: 25%;
+            left: 0;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .input:focus ~ .highlight {
+            animation: inputHighlighter 0.3s ease;
+        }
+
+        @keyframes inputHighlighter {
+            from {
+                background: #008bb4;
+            }
+
+            to {
+                width: 0;
+                background: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tela">
+        <div class="topo">
+            <h1>Perguntas</h1>
+        </div>
+
+        <div class="group">
+            <label for="nome">Nome</label>
+            <input required type="text" id="nome" class="input">
+        </div>
+
+        <div class="group">
+            <label for="sobrenome">Sobrenome</label>
+            <input required type="text" id="sobrenome" class="input">
+        </div>
+
+        <h3>Gênero</h3>
+
+        <div class="group">
+            <h3>Data de nascimento</h3>
+            <input required type="date" class="input">
+        </div>
+
+        <button>Confirmar</button>
+    </div>
+</body>
+</html>
