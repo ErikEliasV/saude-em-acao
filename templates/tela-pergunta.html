@@ -1,177 +1,286 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perguntas</title>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-        }
-        html, body {
-            overflow: hidden;
-            height: 100%;
-            touch-action: none;
-        }
-        h1{
-            color: white;
-            font-size: 20px;
-            font-weight: 700;
-        }
-        h3{
-            color: #008bb4;
-            font-weight: 100;
-        }
-        .topo{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: #008bb4;
-            height: 35px;
-            width: 100%;
-        }
-        .tela{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+    .checkbox-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 20px;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+    html, body {
+    overflow: hidden;
+    height: 100%;
+    touch-action: none;
+    }
+    h1{
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        
+    }
+    h3{
+        color: #008bb4;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+    .topo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #008bb4;
+        height: 35px;
+        width: 100%;
+    }
+    .tela{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
 
-        input[type="checkbox"] {
-            margin-right: 10px;
-            transform: scale(1.2); /* Aumenta um pouco o tamanho do checkbox */
+    .checkbox-div{
+        display: flex;
+
+    }
+    .group {
+    position: relative;
+    margin-top: 30px;
+    }
+
+    .group .input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 280px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+    }
+
+    .group .input:focus {
+    outline: none;
+    }
+
+    .group label{
+    color: #515151;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    }
+
+    .group .input:focus ~ label, .input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #008bb4;
+    }
+
+    .group .bar {
+    position: relative;
+    display: block;
+    width: 280px;
+    }
+
+    .group .bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #008bb4;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    }
+
+    .group .bar:before {
+    left: 50%;
+    }
+
+    .group .bar:after {
+    right: 50%;
+    }
+
+    .group .input:focus ~ .bar:before, .input:focus ~ .bar:after {
+    width: 50%;
+    }
+
+    .group .highlight {
+    display: none;
+    }
+    .group .input:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+    }
+
+    @keyframes inputHighlighter {
+        from {
+            background: #008bb4;
         }
-
-        label {
-            display: inline-block; /* Deixa os checkboxes e labels lado a lado */
-            font-size: 16px;
-            margin-bottom: 10px;
-            margin-right: 20px;
-        } 
-
-        .group {
-            position: relative;
-            margin-top: 30px;
-        }
-
-        .input {
-            font-size: 16px;
-            padding: 10px 10px 10px 5px;
-            display: block;
-            width: 200px;
-            border: none;
-            border-bottom: 1px solid #515151;
+        
+        to {
+            width: 0;
             background: transparent;
         }
+    }
+    .my-form {
+    --_clr-primary: #515151;
+    --_clr-hover: #666;
+    --_clr-checked: #008bb4;
+    }
+    .my-form > div {
+    --_clr-current: var(--_clr-primary);
 
-        .input:focus {
-            outline: none;
-        }
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    }
+    .my-form > div + div {
+    margin-block-start: 0.5rem;
+    }
+    .my-form label {
+    cursor: pointer;
+    color: var(--_clr-current);
+    transition: color 150ms ease-in-out;
+    }
 
-        label {
-            color: #999;
-            font-size: 18px;
-            font-weight: normal;
-            position: absolute;
-            pointer-events: none;
-            left: 5px;
-            top: 10px;
-            transition: 0.2s ease all;
-            -moz-transition: 0.2s ease all;
-            -webkit-transition: 0.2s ease all;
-        }
+    /* styled checkbox */
+    .my-form input[type="checkbox"] {
+    appearance: none;
+    outline: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    aspect-ratio: 1;
+    padding: 0.25rem;
+    background: transparent;
+    border: 1px solid var(--_clr-current);
+    border-radius: 2px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    }
+    .my-form input[type="checkbox"]::after {
+    content: "\2714";
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+    color: var(--_clr-checked);
+    font-size: inherit;
+    font-family: inherit;
+    }
 
-        .input:focus ~ label, .input:valid ~ label {
-            top: -20px;
-            font-size: 14px;
-            color: #008bb4;
-        }
+    .my-form label:hover,
+    .my-form input[type="checkbox"]:focus-visible,
+    .my-form input[type="checkbox"]:focus-visible + label,
+    .my-form input[type="checkbox"]:hover,
+    .my-form input[type="checkbox"]:hover + label {
+    --_clr-current: var(--_clr-hover);
+    }
+    .my-form input[type="checkbox"]:focus-visible::after,
+    .my-form input[type="checkbox"]:hover::after {
+    opacity: 0.5;
+    color: var(--_clr-hover);
+    }
 
-        .bar {
-            position: relative;
-            display: block;
-            width: 200px;
-        }
-
-        .bar:before, .bar:after {
-            content: '';
-            height: 2px;
-            width: 0;
-            bottom: 1px;
-            position: absolute;
-            background: #008bb4;
-            transition: 0.2s ease all;
-            -moz-transition: 0.2s ease all;
-            -webkit-transition: 0.2s ease all;
-        }
-
-        .bar:before {
-            left: 50%;
-        }
-
-        .bar:after {
-            right: 50%;
-        }
-
-        .input:focus ~ .bar:before, .input:focus ~ .bar:after {
-            width: 50%;
-        }
-
-        .highlight {
-            position: absolute;
-            height: 60%;
-            width: 100px;
-            top: 25%;
-            left: 0;
-            pointer-events: none;
-            opacity: 0.5;
-        }
-
-        .input:focus ~ .highlight {
-            animation: inputHighlighter 0.3s ease;
-        }
-
-        @keyframes inputHighlighter {
-            from {
-                background: #008bb4;
-            }
-
-            to {
-                width: 0;
-                background: transparent;
-            }
-        }
+    .my-form input[type="checkbox"]:checked + label:not(:hover),
+    .my-form input[type="checkbox"]:checked:not(:hover) {
+    --_clr-current: var(--_clr-checked);
+    }
+    .my-form input[type="checkbox"]:checked::after {
+    opacity: 1;
+    }
+    .checkbox{
+        display:flex
+    }
+    button{
+    width: 280px;
+    border-radius: 5px;
+    border: transparent;
+    background-color: #008bb4;
+    color: white;
+    font-weight: 300;
+    font-size: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 30px;
+    }
+    button:active{
+        background-color: white;
+        color: #008bb4;
+        transform: scale(0.95);
+        border: #008bb4;
+    }
     </style>
 </head>
 <body>
+
     <div class="tela">
         <div class="topo">
             <h1>Perguntas</h1>
         </div>
-
         <div class="group">
-            <label for="nome">Nome</label>
-            <input required type="text" id="nome" class="input">
+            <input required="" type="text" class="input">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Nome</label>
+          </div>
+          <div class="group">
+            <input required="" type="text" class="input">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Sobrenome</label>
+          </div>
+        <div class="checkbox-div">
+            <h3>Gênero</h3>
+            <div class="checkbox-div">
+                <form class="my-form">
+                    <div>
+                      <input id="check-1" type="checkbox" />
+                      <label for="check-1">Masculino</label>
+                    </div>
+                    <div>
+                      <input id="check-2" type="checkbox" />
+                      <label for="check-2">Feminino</label>
+                    </div>
+                    <div>
+                      <input id="check-3" type="checkbox" />
+                      <label for="check-3">Não Binário</label>
+                    </div>
+                    <div>
+                      <input id="check-4" type="checkbox" />
+                      <label for="check-4">Outro</label>
+                    </div>
+                    <div>
+                        <input id="check-5" type="checkbox" />
+                        <label for="check-5">Prefiro não informar</label>
+                      </div>
+                  </form>
         </div>
-
-        <div class="group">
-            <label for="sobrenome">Sobrenome</label>
-            <input required type="text" id="sobrenome" class="input">
         </div>
-
-        <h3>Gênero</h3>
-
         <div class="group">
             <h3>Data de nascimento</h3>
-            <input required type="date" class="input">
-        </div>
-
-        <button>Confirmar</button>
+            <input required="" type="date" class="input">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+          </div>
+        <button  >Confirmar</button>
     </div>
+
 </body>
 </html>
