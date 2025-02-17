@@ -5,228 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perguntas</title>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-    <style>
-    .checkbox-div{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        gap: 20px;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-    }
-    html, body {
-    overflow: hidden;
-    height: 100%;
-    touch-action: none;
-    }
-    h1{
-        color: white;
-        font-size: 20px;
-        font-weight: 700;
-        
-    }
-    h3{
-        color: #008bb4;
-        font-weight: 600;
-        margin-top: 30px;
-    }
-    .topo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: #008bb4;
-        height: 35px;
-        width: 100%;
-    }
-    .tela{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: relative;
-    }
-
-    .checkbox-div{
-        display: flex;
-
-    }
-    .group {
-    position: relative;
-    margin-top: 30px;
-    }
-
-    .group .input {
-    font-size: 16px;
-    padding: 10px 10px 10px 5px;
-    display: block;
-    width: 280px;
-    border: none;
-    border-bottom: 1px solid #515151;
-    background: transparent;
-    }
-
-    .group .input:focus {
-    outline: none;
-    }
-
-    .group label{
-    color: #515151;
-    font-size: 18px;
-    font-weight: 700;
-    position: absolute;
-    pointer-events: none;
-    left: 5px;
-    top: 10px;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-    }
-
-    .group .input:focus ~ label, .input:valid ~ label {
-    top: -20px;
-    font-size: 14px;
-    color: #008bb4;
-    }
-
-    .group .bar {
-    position: relative;
-    display: block;
-    width: 280px;
-    }
-
-    .group .bar:before, .bar:after {
-    content: '';
-    height: 2px;
-    width: 0;
-    bottom: 1px;
-    position: absolute;
-    background: #008bb4;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-    }
-
-    .group .bar:before {
-    left: 50%;
-    }
-
-    .group .bar:after {
-    right: 50%;
-    }
-
-    .group .input:focus ~ .bar:before, .input:focus ~ .bar:after {
-    width: 50%;
-    }
-
-    .group .highlight {
-    display: none;
-    }
-    .group .input:focus ~ .highlight {
-    animation: inputHighlighter 0.3s ease;
-    }
-
-    @keyframes inputHighlighter {
-        from {
-            background: #008bb4;
-        }
-        
-        to {
-            width: 0;
-            background: transparent;
-        }
-    }
-    .my-form {
-    --_clr-primary: #515151;
-    --_clr-hover: #666;
-    --_clr-checked: #008bb4;
-    }
-    .my-form > div {
-    --_clr-current: var(--_clr-primary);
-
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    }
-    .my-form > div + div {
-    margin-block-start: 0.5rem;
-    }
-    .my-form label {
-    cursor: pointer;
-    color: var(--_clr-current);
-    transition: color 150ms ease-in-out;
-    }
-
-    /* styled checkbox */
-    .my-form input[type="checkbox"] {
-    appearance: none;
-    outline: none;
-    width: 1.5rem;
-    height: 1.5rem;
-    aspect-ratio: 1;
-    padding: 0.25rem;
-    background: transparent;
-    border: 1px solid var(--_clr-current);
-    border-radius: 2px;
-    display: grid;
-    place-content: center;
-    cursor: pointer;
-    }
-    .my-form input[type="checkbox"]::after {
-    content: "\2714";
-    opacity: 0;
-    transition: opacity 150ms ease-in-out;
-    color: var(--_clr-checked);
-    font-size: inherit;
-    font-family: inherit;
-    }
-
-    .my-form label:hover,
-    .my-form input[type="checkbox"]:focus-visible,
-    .my-form input[type="checkbox"]:focus-visible + label,
-    .my-form input[type="checkbox"]:hover,
-    .my-form input[type="checkbox"]:hover + label {
-    --_clr-current: var(--_clr-hover);
-    }
-    .my-form input[type="checkbox"]:focus-visible::after,
-    .my-form input[type="checkbox"]:hover::after {
-    opacity: 0.5;
-    color: var(--_clr-hover);
-    }
-
-    .my-form input[type="checkbox"]:checked + label:not(:hover),
-    .my-form input[type="checkbox"]:checked:not(:hover) {
-    --_clr-current: var(--_clr-checked);
-    }
-    .my-form input[type="checkbox"]:checked::after {
-    opacity: 1;
-    }
-    .checkbox{
-        display:flex
-    }
-    button{
-    width: 280px;
-    border-radius: 5px;
-    border: transparent;
-    background-color: #008bb4;
-    color: white;
-    font-weight: 300;
-    font-size: 16px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    margin-top: 30px;
-    }
-    button:active{
-        background-color: white;
-        color: #008bb4;
-        transform: scale(0.95);
-        border: #008bb4;
-    }
-    </style>
+    <link rel="stylesheet" href="../static/css/styles/style-pergunta.css">
 </head>
 <body>
 
@@ -245,6 +24,18 @@
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Sobrenome</label>
+          </div>
+          <div class="group">
+            <input required="" type="text" class="input">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Altura(Cm)</label>
+          </div>
+          <div class="group">
+            <input required="" type="text" class="input">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Peso(Kg)</label>
           </div>
         <div class="checkbox-div">
             <h3>Gênero</h3>
@@ -279,8 +70,8 @@
             <span class="highlight"></span>
             <span class="bar"></span>
           </div>
-        <button  >Confirmar</button>
+        <button>CONFIRMAR</button>
     </div>
-
+<script src="../static/js/scripts/checkbox.js"></script>
 </body>
 </html>
