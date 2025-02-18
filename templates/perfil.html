@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "League Spartan", serif;
+        }
+        h1{
+            font-size: 23px;
+            color: #008bb4;
+        }
+        h2{
+            font-size: 15px;
+            color: rgb(0, 139, 180);
+            font-weight: 450;
+        }
+        h3{
+            font-size: 18px;
+        }
+        .perfil{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 25px;
+            
+        }
+        .cabecalho{
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+        }
+        .prt{
+            color: black;
+        }
+        .nomedaativ{
+            display: flex;
+            flex-direction: row;
+            gap: 3px;
+        }
+        .barra-tarefa{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            margin: 0px;
+            background-color: rgb(0, 138, 180, 23%);
+            padding: 4px;
+            align-items: center;
+        }
+        .nometrans{
+            color: transparent;
+        }
+        .treino0{
+            display: flex;
+            flex-direction:row;
+            justify-content: space-between;
+            padding: 4px;
+        }
+        .treino{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 10px;
+            gap: 12px 0px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="perfil">
+        <img src="../static/images/foto-perfil-joao.png" alt="" width="90px" height="90px">
+
+        <div class="cabecalho">
+            <h1>João Rocha</h1>
+            <a href=""><img src="../static/images/editar.png" alt="" width="23px" height="23px"></a>
+        </div>  
+        <div class="nomedaativ">
+            <h2>NIVEL DE ATIVIDADE <h2 class="prt">INICIANTE</h2></h2>
+        </div>
+    </div>
+    <div class="barra-tarefa">
+        <h3>JANEIRO <br> DE 2025</h3>
+        <h3>RELATORIO</h3>
+        <h3 class="nometrans">repartido</h3>
+    </div>
+    <div class="treino0">
+        <div class="treino">
+            <h4>20</h4>
+            <h5>TREINOS</h5>
+        </div>
+        <div class="treino">
+            <h4>8.000</h4>
+            <h5>CALORIAS</h5>
+        </div>
+        <div class="treino">
+            <h4>20</h4>
+            <h5>HORAS</h5>
+        </div>
+    </div>
+</body>
+</html>
