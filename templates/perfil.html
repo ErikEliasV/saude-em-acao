@@ -26,6 +26,10 @@
         h3{
             font-size: 18px;
         }
+        h5{
+            color: #008bb4;
+            font-weight: 365;
+        }
         .perfil{
             display: flex;
             flex-direction: column;
@@ -73,7 +77,179 @@
             gap: 12px 0px;
             
         }
+        hr{
+            border: #008bb4 solid 1px;
+            width: 100%;
 
+
+        }
+        .content {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            gap: 5px; 
+        }
+        .clear {
+        clear: both;
+        }
+
+        .checkBox {
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border: 3px solid rgba(255, 255, 255, 0);
+        border-radius: 60px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 0px 0px 2px #008bb4;
+        }
+
+        .checkBox div {
+        width: 60px;
+        height: 60px;
+        background-color: #008bb4;
+        top: -52px;
+        left: -52px;
+        position: absolute;
+        transform: rotateZ(45deg);
+        z-index: 100;
+        }
+
+        .checkBox input[type=checkbox]:checked + div {
+        left: -10px;
+        top: -10px;
+        }
+
+        .checkBox input[type=checkbox] {
+        position: absolute;
+        left: 50px;
+        visibility: hidden;
+        }
+        .listin{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .transition {
+        transition: 300ms ease;
+        }
+        .meta{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            padding: 4px;
+        }
+        .arroz{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+        .mauts{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0px 1px;
+        }
+        .ajeitar-linha {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px; 
+        }
+
+        .ajeitar-linha h4 {
+            margin: 0; 
+        }
+        .group {
+    position: relative;
+    margin-top: 30px;
+    }
+
+    .group .input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 280px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+    }
+
+    .group .input:focus {
+    outline: none;
+    }
+
+    .group label{
+    color: #515151;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    }
+
+    .group .input:focus ~ label, .input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #008bb4;
+    }
+
+    .group .bar {
+    position: relative;
+    display: block;
+    width: 280px;
+    }
+
+    .group .bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #008bb4;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    }
+
+    .group .bar:before {
+    left: 50%;
+    }
+
+    .group .bar:after {
+    right: 50%;
+    }
+
+    .group .input:focus ~ .bar:before, .input:focus ~ .bar:after {
+    width: 50%;
+    }
+
+    .group .highlight {
+    display: none;
+    }
+    .group .input:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+    }
+
+    @keyframes inputHighlighter {
+        from {
+            background: #008bb4;
+        }
+        
+        to {
+            width: 0;
+            background: transparent;
+        }
+    }
     </style>
 </head>
 <body>
@@ -83,11 +259,12 @@
         <div class="cabecalho">
             <h1>João Rocha</h1>
             <a href=""><img src="../static/images/editar.png" alt="" width="23px" height="23px"></a>
-        </div>  
+        </div> 
         <div class="nomedaativ">
             <h2>NIVEL DE ATIVIDADE <h2 class="prt">INICIANTE</h2></h2>
         </div>
     </div>
+    <hr>
     <div class="barra-tarefa">
         <h3>JANEIRO <br> DE 2025</h3>
         <h3>RELATORIO</h3>
@@ -107,5 +284,108 @@
             <h5>HORAS</h5>
         </div>
     </div>
+        <hr>
+        <div>
+            <div class="meta">
+                <h1 class="nometrans">h</h1>
+                <h1>META DA <br> SEMANA</h1>
+                <div>
+                    <div class="arroz">
+                        <div class="mauts">
+                            <img src="../static/images/editar.png" alt="" width="19px" height="19px"></a>
+                            <h4><h4>2</h4>/5</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="listin">
+               
+                <div class="ajeitar-linha">
+                    <div class="content">
+                        <label class="checkBox">
+                          <input id="ch1" type="checkbox">
+                          <div class="transition"></div>
+                        </label>
+                        <h4>25</h4>
+                      </div>
+                </div>
+                 
+                <div class="ajeitar-linha">
+                      <div class="content">
+                        <label class="checkBox">
+                          <input id="ch1" type="checkbox">
+                          <div class="transition"></div>
+                        </label>
+                        <h4>26</h4>
+                      </div>
+                  </div>
+                 
+                  <div class="ajeitar-linha">
+                      <div class="content">
+                        <label class="checkBox">
+                          <input id="ch1" type="checkbox">
+                          <div class="transition"></div>
+                        </label>
+                        <h4>27</h4>
+                      </div>
+                  </div>
+                 
+                  <div class="ajeitar-linha">
+                      <div class="content">
+                        <label class="checkBox">
+                          <input id="ch1" type="checkbox">
+                          <div class="transition"></div>
+                        </label>
+                        <h4>28</h4>
+                      </div>
+                  </div>
+                 
+                  <div class="ajeitar-linha">
+                      <div class="content">
+                        <label class="checkBox">
+                          <input id="ch1" type="checkbox">
+                          <div class="transition"></div>
+                        </label>
+                        <h4>29</h4>
+                      </div>
+                  </div>
+                  
+                  <div class="ajeitar-linha">
+                      <div class="content">
+                        <label class="checkBox">
+                          <input id="ch1" type="checkbox">
+                          <div class="transition"></div>
+                        </label>
+                        <h4>30</h4>
+                      </div>
+                  </div>
+                  
+                  <div class="ajeitar-linha">
+                      <div class="content">
+                        <label class="checkBox">
+                          <input id="ch1" type="checkbox">
+                          <div class="transition"></div>
+                        </label>
+                        <h4 >31</h4>
+                  </div>
+
+                  </div>
+            </div>
+        </div>
+        <div>
+            <h1>Calculadora de IMC</h1>
+            <div class="group">
+                <input required="" type="text" class="input">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Altura(Cm)</label>
+              </div>
+              <div class="group">
+                <input required="" type="text" class="input">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Peso(Kg)</label>
+              </div>
+        </div>
 </body>
 </html>

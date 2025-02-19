@@ -14,7 +14,6 @@
         <h1>Faça seu Cadastro</h1>
         <hr class="ajeitar-registro">
         <form method="post">
-          {% csrf_token %}
           <div class="group">
               <input required id="cpf" type="tel" class="input" maxlength="14" oninput="formatCPF(this)" onchange="formatCPF(this)" >
               <span class="highlight"></span>
