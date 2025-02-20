@@ -14,6 +14,10 @@
         box-sizing: border-box;
         font-family: "League Spartan", serif;
         }
+        html, body {
+        overflow-x: hidden;
+        height: 100%;
+        }
         h1{
             font-size: 23px;
             color: #008bb4;
@@ -80,6 +84,7 @@
         hr{
             border: #008bb4 solid 1px;
             width: 100%;
+            height: 0.4px;
 
 
         }
@@ -164,17 +169,19 @@
 
         .ajeitar-linha h4 {
             margin: 0; 
+            margin-top: 2px;
         }
         .group {
     position: relative;
     margin-top: 30px;
+    margin-bottom: 40px;
     }
 
     .group .input {
     font-size: 16px;
     padding: 10px 10px 10px 5px;
     display: block;
-    width: 280px;
+    width: 120px;
     border: none;
     border-bottom: 1px solid #515151;
     background: transparent;
@@ -206,7 +213,7 @@
     .group .bar {
     position: relative;
     display: block;
-    width: 280px;
+    width: 120px;
     }
 
     .group .bar:before, .bar:after {
@@ -250,6 +257,71 @@
             background: transparent;
         }
     }
+
+    .ajeitar-em-baixo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column  ;
+        margin-top: 50px;
+        padding-top: 10px;
+        background-color: rgb(0, 139, 180,20%);
+    }
+    button{
+    width: 280px;
+    border-radius: 5px;
+    border: transparent;
+    background-color: #008bb4;
+    color: white;
+    font-weight: 300;
+    font-size: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 30px;
+}
+button:active{
+    background-color: white;
+    color: #008bb4;
+    transform: scale(0.95);
+    border: #008bb4;
+}
+.IMC{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    justify-content: space-around;
+    width: 100%;
+
+}
+.resultado0{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(0, 139, 180);
+    padding: 10px;
+    border-radius: 8px;
+}
+.resultado h1{
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.resultado h2{
+    font-size: 22px;
+    font-weight: 300;
+    color:#ffffff
+}
+.resultado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.kaho{
+    margin-top: 10px;
+}
+.meta h1{
+    font-size: 15px;
+}
     </style>
 </head>
 <body>
@@ -292,7 +364,7 @@
                 <div>
                     <div class="arroz">
                         <div class="mauts">
-                            <img src="../static/images/editar.png" alt="" width="19px" height="19px"></a>
+                            <a href=""><img src="../static/images/editar.png" alt="" width="19px" height="19px"></a>
                             <h4><h4>2</h4>/5</h4>
                         </div>
                     </div>
@@ -368,24 +440,79 @@
                         </label>
                         <h4 >31</h4>
                   </div>
+                  
 
-                  </div>
+                </div>
+
             </div>
         </div>
-        <div>
+        <div class="ajeitar-em-baixo">
             <h1>Calculadora de IMC</h1>
-            <div class="group">
-                <input required="" type="text" class="input">
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Altura(Cm)</label>
-              </div>
-              <div class="group">
-                <input required="" type="text" class="input">
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Peso(Kg)</label>
-              </div>
+            <div class="IMC">
+                <div>
+                    <div class="group">
+                        <input required="" id="altura" type="tel" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Altura(Cm)</label>
+                    </div>
+                    <div class="group">
+                        <input required="" id="peso" type="tel" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Peso(Kg)</label>
+                    </div>
+                </div>
+                <div class="resultado0">
+                    <div class="resultado">
+                        <h1>Seu IMC é de:</h1>
+                        <h2 id="imc" class="kaho">-</h2>
+                    </div>
+                    <div class="resultado">
+                        <h1>Peso ideal:</h1>
+                        <h2 id="peso-ideal" class="kaho">-</h2>
+                    </div>
+                    <div class="resultado">
+                        <h1>Sua classificação:</h1>
+                        <h2 id="classificacao" class="kaho">-</h2>
+                    </div>
+                </div>
+            </div>
+            <button onclick="calcularIMC()">Calcular</button>
         </div>
+        <script>
+            function calcularIMC() {
+                
+                const altura = parseFloat(document.getElementById('altura').value) / 100; 
+                const peso = parseFloat(document.getElementById('peso').value);
+    
+                if (!altura || !peso) {
+                    alert("Por favor, insira valores válidos para altura e peso.");
+                    return;
+                }
+    
+               
+                const imc = peso / (altura * altura);
+                document.getElementById('imc').textContent = imc.toFixed(1); 
+    
+
+                const pesoIdeal = 22 * (altura * altura);
+                document.getElementById('peso-ideal').textContent = pesoIdeal.toFixed(1);
+    
+               
+                let classificacao = '';
+                if (imc < 18.5) {
+                    classificacao = 'Abaixo do peso';
+                } else if (imc >= 18.5 && imc < 24.9) {
+                    classificacao = 'Peso normal';
+                } else if (imc >= 25 && imc < 29.9) {
+                    classificacao = 'Sobrepeso';
+                } else {
+                    classificacao = 'Obesidade';
+                }
+                document.getElementById('classificacao').textContent = classificacao;
+            }
+        </script>
+
 </body>
 </html>
