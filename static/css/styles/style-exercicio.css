@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", serif;
+}
+.tela{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.exercicios{
+    background-color: rgb(0, 139, 180, 30%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 0x;         
+    border-radius: 20px; 
+    border: #008bb4 solid 1px;
+    margin-top: 30px;
+}
+h1{
+    font-weight: 500;
+    color: #008bb4;
+    font-size: 25px;
+    margin: 30px;
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+h2{
+    font-weight: 400;
+    font-size: 20px;
+    margin: 30px;
+}
+.exercicios h1{
+    margin: 0px;
+}
+.exercicios img{
+    border-radius: 10px;
+}
+button{
+width: 180px;
+border-radius: 20px;
+border: transparent;
+background-color: #008bb4;
+color: white;
+font-weight: 300;
+font-size: 16px;
+padding-top: 12px;
+padding-bottom: 12px;
+margin: 6px;
+}
+button:active{
+background-color: white;
+color: #008bb4;
+transform: scale(0.95);
+border: #008bb4;
+}
