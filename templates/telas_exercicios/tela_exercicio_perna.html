@@ -18,7 +18,7 @@
         <div class="exercicios">
             <h1>Agachamento</h1>
             <img width="300px" height="250px" src="../../static/gifs/agachamento 1.gif" alt="">
-            <p>
+            <p id="info" style="display: none;"> 
                 <strong>Repetições:</strong> <br>
                 3 séries de 12-15 repetições. <br><br> 
                 <strong>Execução:</strong> <br>
@@ -27,12 +27,12 @@
                     Desça até que suas coxas fiquem paralelas ao chão ou mais, se possível. <br>
                     Empurre os calcanhares para voltar à posição inicial. <br> 
             </p>
-            <button>LER MAIS</button>
+            <button onclick="mostrarInformacao(this)">LER MAIS</button>
         </div>
         <div class="exercicios">
             <h1>Panturilha</h1>
             <img width="300px" height="250px" src="../../static/gifs/panturilha.gif" alt="">
-            <p>
+            <p id="info-2" style="display: none;"> 
                 <strong>Repetições: </strong><br>
                 3 séries de 15-20 repetições. <br> <br>
                     <strong>Execução:</strong> <br>
@@ -41,8 +41,9 @@
                         Desça controladamente até os pés ficarem planos no chão. <br>
                         Para um aumento de intensidade, pode fazer esse movimento em um degrau ou com peso. <br>
             </p>
-            <button>LER MAIS</button>
+            <button onclick="mostrarInformacao(this)">LER MAIS</button>
         </div>
     </div>
+    <script src="../../static/js/scripts/exercicio.js"></script>
 </body>
 </html>

@@ -18,7 +18,7 @@
         <div class="exercicios">
             <h1>Abdominal</h1>
             <img width="300px" height="250px"  src="../../static/gifs/abdominal.gif" alt="">
-            <p id="info-abdominal" style="display: none;"> 
+            <p id="info" style="display: none;"> 
                 <strong>Repetições:</strong> <br> 3 séries de 20-25 repetições. <br> <br>
                 <strong>Execução:</strong> <br>
                 Deite de costas, com os joelhos flexionados e os pés no chão. <br>
@@ -32,7 +32,7 @@
         <div class="exercicios">
             <h1>Abdominal_infra</h1>
             <img width="300px" height="250px"  src="../../static/gifs/abdominal_infra.gif" alt="">
-            <p id="info-abdominal-infra" style="display: none;"> 
+            <p id="info-2" style="display: none;"> 
                 <strong>Repetições:</strong> <br> 3 séries de 15-20 repetições. <br> <br>
                 <strong>Execução:</strong> <br>
                 Deite de costas, com as pernas esticadas e os braços ao lado do corpo. <br>
@@ -42,27 +42,6 @@
             <button onclick="mostrarInformacao(this)">LER MAIS</button> 
         </div>
     </div>
-
-    <script>
-        window.onload = function() {
-            const paragrafo1 = document.getElementById("info-abdominal");
-            const paragrafo2 = document.getElementById("info-abdominal-infra");
-            
-            
-            paragrafo1.style.display = "none";
-            paragrafo2.style.display = "none";
-        }
-
-        function mostrarInformacao(button) {
-            var p = button.previousElementSibling;
-            if (p.style.display === "none") {
-                p.style.display = "block";
-                button.textContent = "LER MENOS";
-            } else {
-                p.style.display = "none";
-                button.textContent = "LER MAIS"; 
-            }
-        }
-    </script>
+    <script src="../../static/js/scripts/exercicio.js"></script>
 </body>
 </html>

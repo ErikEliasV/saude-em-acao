@@ -36,8 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
             container.innerHTML += elementoDia;
         }
-
-        // Disparar evento personalizado após gerar os checkboxes
+        
         const event = new Event("checkboxesGerados");
         document.dispatchEvent(event);
     }

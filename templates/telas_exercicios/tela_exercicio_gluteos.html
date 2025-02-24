@@ -17,7 +17,7 @@
         <div class="exercicios">
             <h1>Agachamento</h1>
             <img width="300px" height="250px" src="../../static/gifs/agachamento 1.gif" alt="">
-            <p>
+            <p id="info" style="display: none;"> 
                 <strong>Repetições:</strong> <br> 3 séries de 12-15 repetições. <br> <br>
                     <strong>Execução:</strong> <br>
                         Fique de pé com os pés na largura dos ombros. <br>
@@ -25,12 +25,12 @@
                         Desça até que suas coxas fiquem paralelas ao chão ou mais, se possível. <br>
                         Empurre os calcanhares para voltar à posição inicial. <br>
             </p>
-            <button>LER MAIS</button>
+            <button onclick="mostrarInformacao(this)">LER MAIS</button>
         </div>
         <div class="exercicios">
             <h1>Step - up</h1>
             <img width="300px" height="250px" src="../../static/gifs/step-up.gif"alt="">
-            <p>
+            <p id="info-2" style="display: none;"> 
                 <strong>Repetições: </strong><br>
                 3 séries de 12-15 repetições para cada perna. <br> <br>
                     <strong>Execução:</strong> <br>
@@ -39,8 +39,9 @@
                         Desça de volta, controle a descida. <br>
                         Repita com a outra perna. <br>
             </p>
-            <button>LER MAIS</button> 
+            <button onclick="mostrarInformacao(this)">LER MAIS</button>
         </div>
     </div>
+    <script src="../../static/js/scripts/exercicio.js"></script>
 </body>
 </html>

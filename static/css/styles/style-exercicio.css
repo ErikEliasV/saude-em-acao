@@ -21,6 +21,10 @@
     border-radius: 20px; 
     border: #008bb4 solid 1px;
     margin-top: 30px;
+    gap: 10px;
+}
+.exercicios p{
+    margin: 20px;
 }
 h1{
     font-weight: 500;
