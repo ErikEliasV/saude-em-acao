@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: black; 
-}
 
 .organizar {
     background-image: url(../../images/fundo-footer.png);
@@ -19,7 +16,7 @@ body {
     align-items: center;
     background-color: transparent;
     width: 100%;
-    height: 600px;
+    height: 270px;
 }
 
 .logo {

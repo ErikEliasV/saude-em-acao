@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.geral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.sobre_nos {
+    background-color:#008bb4 ;
+    width: 100%;
+    height: 200px;
+}
+
+.sobre_nos img{
+    right: 5%;
+    width: 90%;
+    height: 240px;
+    border-radius: 20px;
+}
+
+.sobre_nos strong{
+    font-size: 30px;
+    font-weight: 800;
+    font-family: sans-serif;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 60px;
+    color: white;
+}
+
+.geral h1{
+    margin-top: 215px;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 80%);
+    
+}
+.equipe {
+    margin-top: 50px;
+    text-align: justify;
+    align-items: center;
+}
+
+.missão {
+    margin-top: 20px;
+}
+
+.missão strong{
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: #008bb4;
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.geral img{
+    right: 5%;
+    width: 90%;
+    height: 280px;
+    border-radius: 20px;
+}
+.missão h2{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: rgba(0, 0, 0, 80%);
+    margin-top: 10px;
+}
+
+.equipe strong{
+    font-size: 30px;
+    font-weight: 800;
+    font-family: sans-serif;
+    position: relative;
+    bottom: 15px;
+    left: 10px;
+    color: #008bb4;
+}
+
+.equipe img{
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+}
+.equipe h3{
+    margin-top: 55px;
+    font-weight: 300;
+    text-align: justify;
+    padding-right: 55%;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0, 80%);
+    padding-left: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
