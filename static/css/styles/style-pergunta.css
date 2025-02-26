@@ -1,58 +1,58 @@
-    .checkbox-div{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        gap: 20px;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "League Spartan", serif;
-    }
-    html, body {
+.checkbox-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", serif;
+}
+html, body {
     overflow: hidden;
     height: 100%;
     touch-action: none;
-    }
-    h1{
-        color: white;
-        font-size: 20px;
-        font-weight: 700;
-        
-    }
-    h3{
-        color: #008bb4;
-        font-weight: 600;
-        margin-top: 30px;
-    }
-    .topo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: #008bb4;
-        height: 35px;
-        width: 100%;
-    }
-    .tela{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: relative;
-    }
+}
+h1{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+h3{
+    color: #008bb4;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.topo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #008bb4;
+    height: 35px;
+    width: 100%;
+}
+.tela{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
 
-    .checkbox-div{
-        display: flex;
+.checkbox-div{
+    display: flex;
 
-    }
-    .group {
+}
+.group {
     position: relative;
     margin-top: 30px;
-    }
+}
 
-    .group .input {
+.group .input {
     font-size: 16px;
     padding: 10px 10px 10px 5px;
     display: block;
@@ -60,13 +60,13 @@
     border: none;
     border-bottom: 1px solid #515151;
     background: transparent;
-    }
+}
 
-    .group .input:focus {
+.group .input:focus {
     outline: none;
-    }
+}
 
-    .group label{
+.group label{
     color: #515151;
     font-size: 18px;
     font-weight: 700;
@@ -77,21 +77,21 @@
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
-    }
+}
 
-    .group .input:focus ~ label, .input:valid ~ label {
+.group .input:focus ~ label, .input:valid ~ label {
     top: -20px;
     font-size: 14px;
     color: #008bb4;
-    }
+}
 
-    .group .bar {
+.group .bar {
     position: relative;
     display: block;
     width: 280px;
-    }
+}
 
-    .group .bar:before, .bar:after {
+.group .bar:before, .bar:after {
     content: '';
     height: 2px;
     width: 0;
@@ -101,59 +101,58 @@
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
-    }
+}
 
-    .group .bar:before {
+.group .bar:before {
     left: 50%;
-    }
+}
 
-    .group .bar:after {
+.group .bar:after {
     right: 50%;
-    }
+}
 
-    .group .input:focus ~ .bar:before, .input:focus ~ .bar:after {
+.group .input:focus ~ .bar:before, .input:focus ~ .bar:after {
     width: 50%;
-    }
+}
 
-    .group .highlight {
+.group .highlight {
     display: none;
-    }
-    .group .input:focus ~ .highlight {
+}
+.group .input:focus ~ .highlight {
     animation: inputHighlighter 0.3s ease;
-    }
+}
 
-    @keyframes inputHighlighter {
-        from {
-            background: #008bb4;
-        }
-        
-        to {
-            width: 0;
-            background: transparent;
-        }
+@keyframes inputHighlighter {
+    from {
+        background: #008bb4;
     }
-    .my-form {
+    
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+.my-form {
     --_clr-primary: #515151;
     --_clr-hover: #666;
     --_clr-checked: #008bb4;
-    }
-    .my-form > div {
+}
+.my-form > div {
     --_clr-current: var(--_clr-primary);
-
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    }
-    .my-form > div + div {
+}
+.my-form > div + div {
     margin-block-start: 0.5rem;
-    }
-    .my-form label {
+}
+.my-form label {
     cursor: pointer;
     color: var(--_clr-current);
     transition: color 150ms ease-in-out;
-    }
+}
 
-    .my-form input[type="checkbox"] {
+.my-form input[type="checkbox"] {
     appearance: none;
     outline: none;
     width: 1.5rem;
@@ -166,40 +165,40 @@
     display: grid;
     place-content: center;
     cursor: pointer;
-    }
-    .my-form input[type="checkbox"]::after {
+}
+.my-form input[type="checkbox"]::after {
     content: "\2714";
     opacity: 0;
     transition: opacity 150ms ease-in-out;
     color: var(--_clr-checked);
     font-size: inherit;
     font-family: inherit;
-    }
+}
 
-    .my-form label:hover,
-    .my-form input[type="checkbox"]:focus-visible,
-    .my-form input[type="checkbox"]:focus-visible + label,
-    .my-form input[type="checkbox"]:hover,
-    .my-form input[type="checkbox"]:hover + label {
-    --_clr-current: var(--_clr-hover);
-    }
-    .my-form input[type="checkbox"]:focus-visible::after,
-    .my-form input[type="checkbox"]:hover::after {
-    opacity: 0.5;
-    color: var(--_clr-hover);
-    }
+.my-form label:hover,
+.my-form input[type="checkbox"]:focus-visible,
+.my-form input[type="checkbox"]:focus-visible + label,
+.my-form input[type="checkbox"]:hover,
+.my-form input[type="checkbox"]:hover + label {
+--_clr-current: var(--_clr-hover);
+}
+.my-form input[type="checkbox"]:focus-visible::after,
+.my-form input[type="checkbox"]:hover::after {
+opacity: 0.5;
+color: var(--_clr-hover);
+}
 
-    .my-form input[type="checkbox"]:checked + label:not(:hover),
-    .my-form input[type="checkbox"]:checked:not(:hover) {
-    --_clr-current: var(--_clr-checked);
-    }
-    .my-form input[type="checkbox"]:checked::after {
-    opacity: 1;
-    }
-    .checkbox{
-        display:flex
-    }
-    button{
+.my-form input[type="checkbox"]:checked + label:not(:hover),
+.my-form input[type="checkbox"]:checked:not(:hover) {
+--_clr-current: var(--_clr-checked);
+}
+.my-form input[type="checkbox"]:checked::after {
+opacity: 1;
+}
+.checkbox{
+    display:flex
+}
+button{
     width: 280px;
     border-radius: 5px;
     border: transparent;
@@ -211,9 +210,9 @@
     padding-bottom: 12px;
     margin-top: 30px;
     }
-    button:active{
-        background-color: white;
-        color: #008bb4;
-        transform: scale(0.95);
-        border: #008bb4;
-    }
+button:active{
+    background-color: white;
+    color: #008bb4;
+    transform: scale(0.95);
+    border: #008bb4;
+}

@@ -1,49 +1,51 @@
 
-       * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "League Spartan", serif; 
-        }
-        html, body {
-            height: 100%;
-            margin: 0;
-            overflow-x: hidden;
-        }
-        .texto_de_explicacao {
-            display: flex;
-            flex-direction: row;
-            padding: 10px;
-            align-items: center;
-            padding-top: 20px;
-        }
-        h2 {
-            text-align: center;
-            color: #008bb4;
-            padding-top: 25px;
-        }
-        h3 {
-            font-size: 16px;
-            font-family: "Questrial", serif;
-            font-weight: 100;
-            line-height: 0.9;
-        }
-        .swiper {
-            width: 100%;
-            height: 100%;
-        }
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: none !important;
-        }
-        .swiper-slide img {
-            width: 100%;
-            height: auto;
-            max-width: 700px;
-            display: block;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", serif; 
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+.texto_de_explicacao {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+    padding-top: 20px;
+}
+h2 {
+    text-align: center;
+    color: #008bb4;
+    padding-top: 25px;
+}
+h3 {
+    font-size: 16px;
+    font-family: "Questrial", serif;
+    font-weight: 100;
+    line-height: 0.9;
+}
+.swiper {
+    padding-top: 30px;
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none !important;
+}
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    display: block;
+}

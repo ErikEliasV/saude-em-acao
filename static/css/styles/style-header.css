@@ -10,10 +10,10 @@ body {
 header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: white;
-    position: fixed; /* Fixa o header no topo */
-    top: 0; /* Alinha o header no topo da página */
+    position: fixed; 
+    top: 0;
     left: 0;
-    width: 100%; /* Ocupa toda a largura da tela */
+    width: 100%; 
     z-index: 1000;
     padding: 10px 20px;
     display: flex;
@@ -41,9 +41,13 @@ button, input {
     background: white url('https://cdn-icons-png.flaticon.com/512/149/149852.png') no-repeat right 10px center;
     background-size: 16px;
     padding-left: 10px;
+    margin-right: 10px;
 }
-
-.ajeitar,
+.ajeitar{
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
 .header-botao {
     display: flex;
     align-items: center;
@@ -89,15 +93,15 @@ button, input {
 }
 
 .menu {
-    position: fixed; /* Fixa o menu no topo */
-    top: 60px; /* Ajuste para que o menu fique logo abaixo do header */
+    position: fixed;
+    top: 60px; 
     left: 0;
     width: 200px;
     background: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     display: none;
-    z-index: 999; /* Garante que o menu fique acima de outros elementos */
+    z-index: 999; 
 }
 
 .menu ul {
@@ -151,4 +155,7 @@ a:hover {
 
 .submenu a {
     font-size: 14px;
+}
+.imagem-logo{
+    margin-left: 5px;
 }

@@ -21,7 +21,7 @@
 .sobre_nos img{
     right: 5%;
     width: 90%;
-    height: 240px;
+    height: auto;
     border-radius: 20px;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .geral h1{
-    margin-top: 215px;
+    margin-top: 130px;
     font-weight: 300;
     font-size: 15px;
     text-align: justify;
@@ -70,7 +70,7 @@
 .geral img{
     right: 5%;
     width: 90%;
-    height: 280px;
+    height: autopx;
     border-radius: 20px;
 }
 .missão h2{

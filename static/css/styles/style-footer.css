@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+a:visited {
+    text-decoration: none;
+    color: inherit; /* Opcional: mantém a cor do link consistente */
+}
+a {
+    text-decoration: none;
+}
 
 .organizar {
     background-image: url(../../images/fundo-footer.png);
@@ -27,7 +34,7 @@
 }
 
 .botao-footer {
-    background: none; /* Remove qualquer fundo preto */
+    background: none;
     display: block;
     width: 30px;
     height: 30px;
@@ -40,7 +47,7 @@ h1, h3 {
 }
 
 img {
-    background: none; /* Remove o fundo de qualquer imagem */
+    background: none; 
 }
 .ajeitar-botao{
     display: flex;

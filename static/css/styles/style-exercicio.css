@@ -46,20 +46,20 @@ h2{
     border-radius: 10px;
 }
 button{
-width: 180px;
-border-radius: 20px;
-border: transparent;
-background-color: #008bb4;
-color: white;
-font-weight: 300;
-font-size: 16px;
-padding-top: 12px;
-padding-bottom: 12px;
-margin: 6px;
+    width: 180px;
+    border-radius: 20px;
+    border: transparent;
+    background-color: #008bb4;
+    color: white;
+    font-weight: 300;
+    font-size: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 6px;
 }
 button:active{
-background-color: white;
-color: #008bb4;
-transform: scale(0.95);
-border: #008bb4;
+    background-color: white;
+    color: #008bb4;
+    transform: scale(0.95);
+    border: #008bb4;
 }
