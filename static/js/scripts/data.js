@@ -8,21 +8,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const mesAtual = meses[dataAtual.getMonth()];
     const anoAtual = dataAtual.getFullYear();
 
-
     document.getElementById("mes-ano").innerHTML = `${mesAtual} <br> DE ${anoAtual}`;
 
     function gerarDiasDaSemana() {
-        const container = document.querySelector(".listin"); 
-        container.innerHTML = ""; 
+        const container = document.querySelector(".listin");
+        container.innerHTML = "";
         const hoje = new Date();
-        const diaSemanaAtual = hoje.getDay(); 
+        const diaSemanaAtual = hoje.getDay();
         const diaAtual = hoje.getDate();
 
         const ajuste = diaSemanaAtual === 0 ? -6 : 1 - diaSemanaAtual;
 
         for (let i = 0; i < 7; i++) {
             const dataCalculada = new Date(hoje);
-            dataCalculada.setDate(diaAtual + ajuste + i); 
+            dataCalculada.setDate(diaAtual + ajuste + i);
 
             const elementoDia = `
                 <div class="ajeitar-linha">
@@ -37,6 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
             container.innerHTML += elementoDia;
         }
+
+        // Disparar evento personalizado após gerar os checkboxes
+        const event = new Event("checkboxesGerados");
+        document.dispatchEvent(event);
     }
 
     gerarDiasDaSemana();
